@@ -53,7 +53,6 @@ pipes[0]={
 
 function draw(){
     ctx.drawImage(background, 0, 0)
-    ctx.drawImage(foreground, 0, 0+background.height-foreground.height)
     
     for(i=0;i<pipes.length;i++){
         ctx.drawImage(upperPipe, pipes[i].x, pipes[i].y)
@@ -73,6 +72,7 @@ function draw(){
                     alert('Game over')
                 }
     }
+    ctx.drawImage(foreground, 0, 0+background.height-foreground.height)
     ctx.drawImage(bird, xPos, yPos)
 
     yPos=yPos+gravity
